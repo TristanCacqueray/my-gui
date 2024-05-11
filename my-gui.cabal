@@ -68,7 +68,7 @@ library
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.17.2.1
+    build-depends:    base ^>=4.17.2.1, dear-imgui
 
     -- Directories containing source files.
     hs-source-dirs:   src
@@ -92,7 +92,7 @@ executable my-gui
     -- Other library packages from which modules are imported.
     build-depends:
         base ^>=4.17.2.1,
-        my-gui
+        my-gui, dear-imgui, sdl2, managed, gl
 
     -- Directories containing source files.
     hs-source-dirs:   app
