@@ -5,6 +5,8 @@
 
 module Main ( main ) where
 
+import MyLib
+
 import DearImGui
 import DearImGui.OpenGL3
 import DearImGui.SDL
@@ -15,7 +17,7 @@ import SDL
 
 import Control.Monad.Managed
 import Control.Monad.IO.Class ()
-import Control.Monad (when, unless)
+import Control.Monad (unless)
 import Control.Exception (bracket, bracket_)
 
 main :: IO ()
@@ -51,12 +53,7 @@ mainLoop window = unlessQuit $ do
 
   -- Build the GUI
   withWindowOpen "Hello, ImGui!" $ do
-    -- Add a text widget
-    text "Hello, ImGui!"
-
-    -- Add a button widget, and call 'putStrLn' when it's clicked
-    button "Clickety Click" >>= \clicked ->
-      when clicked $ putStrLn "Ow!"
+    myGUI
 
   -- Show the ImGui demo window
   showDemoWindow
