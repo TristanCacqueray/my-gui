@@ -91,7 +91,7 @@ executable my-gui
 
     -- Other library packages from which modules are imported.
     build-depends:
-        base ^>=4.17.2.1,
+        base ^>=4.17.2.1, foreign-store,
         my-gui, dear-imgui, sdl2, managed, gl
 
     -- Directories containing source files.
